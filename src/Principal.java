@@ -7,6 +7,8 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		int op;
 		Cliente cliente = new Cliente();
+		Vendedor vendedor = new Vendedor();
+		Produto produto = new Produto();
 		
 		do {
 		System.out.println("\n---- PROJETO DE VENDAS ----");	
@@ -45,12 +47,36 @@ public class Principal {
 			break;
 		case 3:
 			System.out.println("\n---- CADASTRAR VENDEDOR ----");
+			
+			System.out.println("Digite o nome do vendedor:");	
+			vendedor.setNome(sc.next());	
+			
+			System.out.println("Digite o CPF do vendedor:");	
+			vendedor.setCpf(sc.next());	
+			
+			System.out.println(vendedor.getNome());
+			System.out.println(vendedor.getCpf());
+			
 			break;
 		case 4:
 			System.out.println("\n---- LISTAR VENDEDORES ----");
 			break;
 		case 5:
 			System.out.println("\n---- CADASTRAR PRODUTO ----");
+			
+			System.out.println("Digite o nome do produto:");	
+			produto.setNome(sc.next());	
+			
+			System.out.println("Digite o preço do produdo:");	
+			produto.setPreço(sc.nextDouble());	
+			
+			System.out.println("Digite a quantidade do produto:");	
+			produto.setQuantidade(sc.nextInt());	
+			
+			System.out.println(produto.getNome());
+			System.out.println(produto.getPreço());
+			System.out.println(produto.getQuantidade());
+			
 			break;
 		case 6:
 			System.out.println("\n---- LISTAR PRODUTOS ----");
